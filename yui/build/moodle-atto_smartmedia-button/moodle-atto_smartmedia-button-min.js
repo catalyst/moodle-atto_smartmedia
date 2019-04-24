@@ -1,0 +1,1 @@
+YUI.add("moodle-atto_smartmedia-button",function(t,o){t.namespace("M.atto_smartmedia").Button=t.Base.create("button",t.M.editor_atto.EditorPlugin,[],{initializer:function(){window.console.log("load"),this.addButton({icon:"e/insert_edit_video",callback:this._displayDialogue,tags:"video, audio",tagMatchRequiresAll:!1})}})},"@VERSION@",{requires:["moodle-editor_atto-plugin"]});

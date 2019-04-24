@@ -25,4 +25,5 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Atto Smart Media';
+$string['pluginname'] = 'Smart Media';
+$string['privacy:metadata'] = 'The atto_smartmedia plugin does not store any personal data.';
