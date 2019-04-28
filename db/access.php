@@ -15,17 +15,27 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin version and other meta-data are defined here.
+ * Plugin capabilities.
  *
- * @package     atto_smartmedia
- * @copyright   2019 Matt Porritt <mattp@catalyst-au.net>
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   atto_brightcove
+ * @author    Dmitrii Metelkin (dmitriim@catalyst-au.net)
+ * @copyright Catalyst IT
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'atto_smartmedia';
-$plugin->release = '2019042600';
-$plugin->version = 2019042600;
-$plugin->requires = 2018051700;
-$plugin->maturity = MATURITY_ALPHA;
+$capabilities = array(
+
+    'atto/smartmedia:visible' => array(
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_COURSE,
+        'archetypes' => array(
+            'manager' => CAP_ALLOW,
+            'coursecreator' => CAP_ALLOW,
+            'teacher' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'student' => CAP_PROHIBIT,
+        )
+    ),
+);

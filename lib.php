@@ -15,17 +15,46 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin version and other meta-data are defined here.
+ * Plugin lib functions.
  *
  * @package     atto_smartmedia
+ * @category    string
  * @copyright   2019 Matt Porritt <mattp@catalyst-au.net>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'atto_smartmedia';
-$plugin->release = '2019042600';
-$plugin->version = 2019042600;
-$plugin->requires = 2018051700;
-$plugin->maturity = MATURITY_ALPHA;
+/**
+ * Initialise the strings required for JS.
+ */
+function atto_smartmedia_strings_for_js() {
+    global $PAGE;
+
+    $PAGE->requires->strings_for_js(
+        array(
+            'insert',
+            'select',
+        ),
+        'atto_smartmedia'
+    );
+}
+
+/**
+ * Return the js params required for this module.
+ *
+ * @return array of additional params to pass to javascript init function for this module.
+ */
+function atto_smartmedia_params_for_js($elementid, $options, $fpoptions) {
+    global $COURSE;
+
+    $coursecontext = context_course::instance($COURSE->id);
+    $params = array();
+    $params['disabled'] = false;
+
+    if (!has_capability('atto/smartmedia:visible', $coursecontext)) {
+        $params['disabled'] = true;
+    }
+
+    return $params;
+}
