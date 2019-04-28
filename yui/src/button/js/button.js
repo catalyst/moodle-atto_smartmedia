@@ -41,9 +41,11 @@ var COMPONENTNAME = 'atto_smartmedia',
     },
     TEMPLATE = '' +
         '<form class="mform atto_form {{CSS.FORM}}">' +
-        '<button class="{{CSS.BUTTON_SELECT}}" name="{{CSS.BUTTON_SELECT}}" type="button">{{get_string "select" component}}</button>' +
+        '<input id="smartmedia-id" class="form-control" type="text" size="32"/>' +
+        '<button class="btn btn-secondary select" name="{{CSS.BUTTON_SELECT}}" type="button">{{get_string "select" component}}</button>' +
+        '<button class="btn btn-secondary select" name="{{CSS.BUTTON_SELECT}}" type="button">{{get_string "select" component}}</button>' +
         '<br /><br />' +
-        '<button class="btn btn-secondary submit {{CSS.BUTTON}}" type="submit">{{get_string "insert" component}}</button>' +
+        '<button class="btn btn-primary submit {{CSS.BUTTON}}" type="submit">{{get_string "insert" component}}</button>' +
         '</form>';
 
 
