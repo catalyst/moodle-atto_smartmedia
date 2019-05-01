@@ -28,6 +28,8 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Smart Media';
 $string['privacy:metadata'] = 'The atto_smartmedia plugin does not store any personal data.';
 
-$string['insert'] = 'Insert';
-$string['select'] = 'Select smart media';
+$string['add'] = 'Add smart media asset';
+$string['insertnew'] = 'Insert new smart media';
+$string['insertexisting'] = 'Insert smart media';
+$string['select'] = 'Select existing smart media';
 $string['smartmedia:visible'] = 'Smartmedia button visible';

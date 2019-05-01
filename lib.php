@@ -33,7 +33,9 @@ function atto_smartmedia_strings_for_js() {
 
     $PAGE->requires->strings_for_js(
         array(
-            'insert',
+            'add',
+            'insertexisting',
+            'insertnew',
             'select',
         ),
         'atto_smartmedia'

@@ -44,10 +44,10 @@ var COMPONENTNAME = 'atto_smartmedia',
     TEMPLATE = '' +
         '<form class="mform atto_form {{CSS.FORM}}">' +
         '<input id="smartmedia-id" class="form-control" type="text" size="32"/>' +
-        '<button class="btn btn-secondary select" name="{{CSS.BUTTON_SELECT}}" type="button">{{get_string "select" component}}</button>' +
+        '<button class="btn btn-secondary select" name="{{CSS.BUTTON_SELECT}}" type="button">{{get_string "insertnew" component}}</button>' +
         '<button class="btn btn-secondary select" name="{{CSS.BUTTON_SELECT}}" type="button">{{get_string "select" component}}</button>' +
         '<br /><br />' +
-        '<button class="btn btn-primary submit {{CSS.BUTTON}}" type="submit">{{get_string "insert" component}}</button>' +
+        '<button class="btn btn-primary submit {{CSS.BUTTON}}" type="submit">{{get_string "insertexisting" component}}</button>' +
         '</form>';
 
 
@@ -111,7 +111,7 @@ Y.namespace('M.atto_smartmedia').Button = Y.Base.create('button', Y.M.editor_att
         this._currentSelection = this.get('host').getSelection();
 
         var dialogue = this.getDialogue({
-            headerContent: M.util.get_string('insert', COMPONENTNAME, null),
+            headerContent: M.util.get_string('add', COMPONENTNAME, null),
             focusAfterHide: true,
             width: 800,
             //focusOnShowSelector: SELECTORS.URL_INPUT
